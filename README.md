@@ -1,10 +1,17 @@
 # My iDroid Stash
-### 我自用的玩机软件
+**归档自用**
+
+## 索引
 
 ## 索引
 
 - [Android](#android)
+    - [权限类](#权限类)
+    - [工具类](#工具类)
 - [iOS](#ios)
+    - [工具类](#工具类-1)
+    - [Jailbreak](#jailbreak)
+    - [自签](#自签)
 
 ---
 
@@ -17,6 +24,7 @@
 | Shizuku | [官网](https://shizuku.rikka.app/zh-hans/) | [GitHub Releases](https://github.com/RikkaApps/Shizuku/releases) | ![Shizuku 最新版本](https://img.shields.io/github/v/release/RikkaApps/Shizuku) |
 | Shizuku (FORK) | [GitHub](https://github.com/thedjchi/Shizuku) | [GitHub Releases](https://github.com/thedjchi/Shizuku/releases) | ![Shizuku (FORK) 最新版本](https://img.shields.io/github/v/release/thedjchi/Shizuku) |
 | Dhizuku | [GitHub](https://github.com/iamr0s/Dhizuku) | [GitHub Releases](https://github.com/iamr0s/Dhizuku/releases) | ![Dhizuku 最新版本](https://img.shields.io/github/v/release/iamr0s/Dhizuku) |
+| Magisk | [官网](https://magisk.me/) | [GitHub Releases](https://github.com/topjohnwu/Magisk/releases) | ![ 最新版本](https://img.shields.io/github/v/release/topjohnwu/Magisk) |
 | KernelSU | [官网](https://kernelsu.org/zh_CN/) | [GitHub Releases](https://github.com/tiann/KernelSU/releases) | ![KernelSU 最新版本](https://img.shields.io/github/v/release/tiann/KernelSU) |
 
 ---
@@ -56,10 +64,10 @@
 | 工具 | 介绍 | 下载链接 | 版本 |
 |-|-|-|-|
 | Dopamine | [官网](https://dopamine.dhinak.net/) | [GitHub Releases](https://github.com/opa334/Dopamine/releases) | ![Dopamine 最新版本](https://img.shields.io/github/v/release/opa334/Dopamine) |
-| palera1n | [官网](https://palera.in/) | [Github Releases](https://github.com/palera1n/palera1n/releases) | ![palera1n 最新版本](https://img.shields.io/github/v/release/palera1n/palera1n) |
+| palera1n | [官网](https://palera.in/) | [GitHub Releases](https://github.com/palera1n/palera1n/releases) | ![palera1n 最新版本](https://img.shields.io/github/v/release/palera1n/palera1n) |
 | unc0ver | [官网](https://unc0ver.dev/) | [官网下载](https://unc0ver.dev/) | 请按网站实际显示为准 |
-| Taurine | [官网](https://taurine.app/) | [Github Releases](https://github.com/Odyssey-Team/Taurine/releases) | ![Taurine 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Taurine) |
-| Odyssey | [官网](https://theodyssey.dev/) | [Github Releases](https://github.com/Odyssey-Team/Odyssey/releases) | ![ 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Odyssey) |
+| Taurine | [官网](https://taurine.app/) | [GitHub Releases](https://github.com/Odyssey-Team/Taurine/releases) | ![Taurine 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Taurine) |
+| Odyssey | [官网](https://theodyssey.dev/) | [GitHub Releases](https://github.com/Odyssey-Team/Odyssey/releases) | ![ 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Odyssey) |
 | checkra1n | [官网](https://checkra.in/) | [官网下载](https://checkra.in) | 请按网站实际显示为准 |
 
 ---
