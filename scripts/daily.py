@@ -10,7 +10,7 @@ import requests
 import subprocess
 import os
 
-README = "../README.md"
+README = "README.md"
 
 def get_mt_version():
     url = "https://mt2.cn/download/"
@@ -45,7 +45,10 @@ def get_aisi_version():
 
 def get_shalou_version():
     url = "https://www.shalou.net/data.json"
-    resp = requests.get(url, timeout=10)
+    try:
+        resp = requests.get(url, timeout=30)
+    except requests.exceptions.Timeout:
+        raise Exception("沙漏验机连接超时")
     data = resp.json()
     version = data.get("shalouWin64", {}).get("version")
     if version:

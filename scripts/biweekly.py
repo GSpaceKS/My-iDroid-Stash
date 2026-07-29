@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 每半月更新：NB助手、unc0ver、checkra1n、iMazing
-Scene 无法自动获取，保持手动维护
 统一使用 Badge 展示版本号
 """
 
@@ -10,12 +9,15 @@ import os
 import requests
 import subprocess
 
-README = "../README.md"
+README = "README.md"
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
 
 def get_nb_version():
     url = "https://nbtool.lanzn.com/nbtool-win64"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=30)
+    except requests.exceptions.Timeout:
+        raise Exception("NB助手连接超时")
     resp.encoding = 'utf-8'
     match = re.search(r'nbtool-(\d+\.\d+\.\d+\.\d+)-win64\.exe', resp.text)
     if match:
