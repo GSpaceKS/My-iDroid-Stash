@@ -6,36 +6,52 @@
 
 import re
 import os
+import time
 import requests
 import subprocess
 
 README = "README.md"
-HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+}
+
 
 def get_nb_version():
+    """从蓝奏云获取 NB助手 版本号"""
     url = "https://nbtool.lanzn.com/nbtool-win64"
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=30)
-    except requests.exceptions.Timeout:
-        raise Exception("NB助手连接超时")
-    resp.encoding = 'utf-8'
-    match = re.search(r'nbtool-(\d+\.\d+\.\d+\.\d+)-win64\.exe', resp.text)
-    if match:
-        return match.group(1)
-    raise Exception("NB助手 版本未找到")
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=30)
+            resp.encoding = 'utf-8'
+            match = re.search(r'nbtool-(\d+\.\d+\.\d+\.\d+)-win64\.exe', resp.text)
+            if match:
+                return match.group(1)
+        except Exception:
+            if attempt < 2:
+                time.sleep(2)
+            continue
+    raise Exception("NB助手 版本未找到（蓝奏云请求失败）")
+
 
 def get_unc0ver_version():
     url = "https://unc0ver.dev/"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
     resp.encoding = 'utf-8'
     match = re.search(r'v(\d+\.\d+\.\d+)', resp.text)
     if match:
         return f"v{match.group(1)}"
     raise Exception("unc0ver 版本未找到")
 
+
 def get_checkra1n_version():
     url = "https://checkra.in/releases/"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
     resp.encoding = 'utf-8'
     text = resp.text
     match = re.search(r'checkra1n\s+(\d+\.\d+\.\d+)\s+beta', text)
@@ -46,9 +62,10 @@ def get_checkra1n_version():
         return match.group(1)
     raise Exception("checkra1n 版本未找到")
 
+
 def get_imazing_version():
     url = "https://imazing.com/download"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
     resp.encoding = 'utf-8'
     text = resp.text
     match = re.search(r'Version:</p>\s*<p><b>([\d.]+)</b></p>', text, re.DOTALL)
@@ -62,7 +79,9 @@ def get_imazing_version():
         return match.group(1)
     raise Exception("iMazing 版本未找到")
 
+
 def make_badge(version_str):
+    """将版本字符串转为 Badge Markdown"""
     ver_match = re.search(r'(\d+\.\d+\.\d+\.?\d*)', version_str)
     if not ver_match:
         ver_match = re.search(r'(\d+\.\d+)', version_str)
@@ -75,11 +94,9 @@ def make_badge(version_str):
     badge_url = f"https://img.shields.io/badge/{label}-v{ver}-{color}"
     return f"![{label}]({badge_url})"
 
-def update_readme(project_name, new_version):
-    if new_version is None:
-        print(f"⏭️ {project_name} 跳过更新（无版本信息）")
-        return False
 
+def update_readme(project_name, new_version):
+    """更新 README 中对应项目的 Badge"""
     with open(README, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -107,6 +124,7 @@ def update_readme(project_name, new_version):
         print(f"⏭️ {project_name} 版本无变化")
         return False
 
+
 def biweekly_update():
     projects = [
         {"name": "NB助手", "get": get_nb_version},
@@ -126,6 +144,7 @@ def biweekly_update():
 
     return any_updated
 
+
 if __name__ == "__main__":
     if biweekly_update():
         if os.path.exists('.git'):
@@ -134,3 +153,5 @@ if __name__ == "__main__":
             subprocess.run(["git", "add", README], check=False)
             subprocess.run(["git", "commit", "-m", "biweekly: update versions (Badge)"], check=False)
             subprocess.run(["git", "push"], check=False)
+        else:
+            print("⚠️ 不在 git 仓库中，跳过提交")
