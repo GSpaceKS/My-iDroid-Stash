@@ -61,7 +61,7 @@
 | <img src="icons/iOS/Tools/iCloud.png" width="24"> | iCloud | [官网](https://www.icloud.com/) | [Microsoft Store](https://apps.microsoft.com/detail/9pktq5699m62?hl=zh-CN&gl=CN) / [普通安装包 (2020 老版本)](https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe) | 请自行在 Microsoft Store 上查看 |
 | <img src="icons/iOS/Tools/i4.png" width="24"> | 爱思助手 | [官网](https://i4.cn/) | [官网下载](https://i4.cn/) |![release](https://img.shields.io/badge/release-v9.16-blue)|
 | <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) |![release](https://img.shields.io/badge/release-v8.1.0-blue)|
-| <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) |![release](https://img.shields.io/badge/release-v3.6.1-blue)|
 
 ---
 
@@ -71,10 +71,10 @@
 |-|-|-|-|-|
 | <img src="icons/iOS/Jailbreak/Dopamine.png" width="24"> | Dopamine | [官网](https://dopamine.dhinak.net/) | [GitHub Releases](https://github.com/opa334/Dopamine/releases) | ![Dopamine 最新版本](https://img.shields.io/github/v/release/opa334/Dopamine) |
 | <img src="icons/iOS/Jailbreak/palera1n.png" width="24"> | palera1n | [官网](https://palera.in/) | [GitHub Releases](https://github.com/palera1n/palera1n/releases) | ![palera1n 最新版本](https://img.shields.io/github/v/release/palera1n/palera1n) |
-| <img src="icons/iOS/Jailbreak/unc0ver.png" width="24"> | unc0ver | [官网](https://unc0ver.dev/) | [官网下载](https://unc0ver.dev/) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Jailbreak/unc0ver.png" width="24"> | unc0ver | [官网](https://unc0ver.dev/) | [官网下载](https://unc0ver.dev/) |![release](https://img.shields.io/badge/release-v4.3.1-blue)|
 | <img src="icons/iOS/Jailbreak/Taurine.png" width="24"> | Taurine | [官网](https://taurine.app/) | [GitHub Releases](https://github.com/Odyssey-Team/Taurine/releases) | ![Taurine 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Taurine) |
 | <img src="icons/iOS/Jailbreak/Odyssey.png" width="24"> | Odyssey | [官网](https://theodyssey.dev/) | [GitHub Releases](https://github.com/Odyssey-Team/Odyssey/releases) | ![ 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Odyssey) |
-| <img src="icons/iOS/Jailbreak/checkra1n.png" width="24"> | checkra1n | [官网](https://checkra.in/) | [官网下载](https://checkra.in) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Jailbreak/checkra1n.png" width="24"> | checkra1n | [官网](https://checkra.in/) | [官网下载](https://checkra.in) |![beta](https://img.shields.io/badge/beta-v0.12.4-orange)|
 
 ---
 
