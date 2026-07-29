@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 每日更新：MT管理器、Sideloadly、爱思助手、沙漏验机
 统一使用 Badge 展示版本号
@@ -12,41 +11,58 @@ import os
 
 README = "README.md"
 
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+}
+
+
 def get_mt_version():
     url = "https://mt2.cn/download/"
-    resp = requests.get(url, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
     resp.encoding = 'utf-8'
     match = re.search(r'版本名：([vV]?\d+\.\d+\.\d+)', resp.text)
     if match:
         return match.group(1)
     raise Exception("MT 版本未找到")
 
+
 def get_sideloadly_version():
     url = "https://sideloadly.io/"
-    resp = requests.get(url, timeout=10)
-    json_ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', resp.text, re.DOTALL)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
+    resp.encoding = 'utf-8'
+    text = resp.text
+
+    json_ld = re.search(r'<script type="application/ld\+json">(.*?)</script>', text, re.DOTALL)
     if json_ld:
-        data = json.loads(json_ld.group(1))
-        if 'softwareVersion' in data:
-            return data['softwareVersion']
-    match = re.search(r'v(\d+\.\d+\.\d+)', resp.text)
-    if match:
-        return match.group(1)
+        try:
+            data = json.loads(json_ld.group(1))
+            if 'softwareVersion' in data:
+                return data['softwareVersion']
+        except:
+            pass
+
     raise Exception("Sideloadly 版本未找到")
+
 
 def get_aisi_version():
     url = "https://www.i4.cn/pros/pc.html"
-    resp = requests.get(url, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=15)
     resp.encoding = 'utf-8'
     match = re.search(r'V(\d+\.\d+)', resp.text)
     if match:
         return f"V{match.group(1)}"
     raise Exception("爱思助手版本未找到")
 
+
 def get_shalou_version():
     url = "https://www.shalou.net/data.json"
     try:
-        resp = requests.get(url, timeout=30)
+        resp = requests.get(url, headers=HEADERS, timeout=30)
     except requests.exceptions.Timeout:
         raise Exception("沙漏验机连接超时")
     data = resp.json()
@@ -54,6 +70,7 @@ def get_shalou_version():
     if version:
         return version
     raise Exception("沙漏验机版本未找到")
+
 
 def make_badge(version_str):
     ver_match = re.search(r'(\d+\.\d+\.\d+\.?\d*)', version_str)
@@ -67,6 +84,7 @@ def make_badge(version_str):
     color = 'orange' if is_beta else 'blue'
     badge_url = f"https://img.shields.io/badge/{label}-v{ver}-{color}"
     return f"![{label}]({badge_url})"
+
 
 def update_readme(project_name, new_version):
     with open(README, 'r', encoding='utf-8') as f:
@@ -96,6 +114,7 @@ def update_readme(project_name, new_version):
         print(f"⏭️ {project_name} 版本无变化")
         return False
 
+
 def daily_update():
     projects = [
         {"name": "MT管理器", "get": get_mt_version},
@@ -114,6 +133,7 @@ def daily_update():
             print(f"❌ 获取 {p['name']} 版本失败: {e}")
 
     return any_updated
+
 
 if __name__ == "__main__":
     if daily_update():

@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
 """
-每半月更新：NB助手、unc0ver、checkra1n、iMazing
+每半月更新：unc0ver、checkra1n、iMazing
 统一使用 Badge 展示版本号
 """
 
 import re
 import os
-import time
 import requests
 import subprocess
 
@@ -16,27 +14,10 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Encoding': 'gzip, deflate',
     'Connection': 'keep-alive',
     'Upgrade-Insecure-Requests': '1',
 }
-
-
-def get_nb_version():
-    """从蓝奏云获取 NB助手 版本号"""
-    url = "https://nbtool.lanzn.com/nbtool-win64"
-    for attempt in range(3):
-        try:
-            resp = requests.get(url, headers=HEADERS, timeout=30)
-            resp.encoding = 'utf-8'
-            match = re.search(r'nbtool-(\d+\.\d+\.\d+\.\d+)-win64\.exe', resp.text)
-            if match:
-                return match.group(1)
-        except Exception:
-            if attempt < 2:
-                time.sleep(2)
-            continue
-    raise Exception("NB助手 版本未找到（蓝奏云请求失败）")
 
 
 def get_unc0ver_version():
@@ -81,7 +62,6 @@ def get_imazing_version():
 
 
 def make_badge(version_str):
-    """将版本字符串转为 Badge Markdown"""
     ver_match = re.search(r'(\d+\.\d+\.\d+\.?\d*)', version_str)
     if not ver_match:
         ver_match = re.search(r'(\d+\.\d+)', version_str)
@@ -96,7 +76,6 @@ def make_badge(version_str):
 
 
 def update_readme(project_name, new_version):
-    """更新 README 中对应项目的 Badge"""
     with open(README, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -127,7 +106,6 @@ def update_readme(project_name, new_version):
 
 def biweekly_update():
     projects = [
-        {"name": "NB助手", "get": get_nb_version},
         {"name": "unc0ver", "get": get_unc0ver_version},
         {"name": "checkra1n", "get": get_checkra1n_version},
         {"name": "iMazing", "get": get_imazing_version},
