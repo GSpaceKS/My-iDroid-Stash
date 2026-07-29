@@ -1,6 +1,14 @@
 # My iDroid Stash
 **归档自用**
 
+``` text
+使用 GitHub Action 搭配自己写的Python脚本来获取版本号
+其中，每日获取版本号的是 MT管理器、Sideloadly、爱思助手、沙漏验机
+每半个月获取版本号的是 NB助手、unc0ver、checkra1n、iMazing
+```
+
+> **由于 Scene 官网使用 Vue 编写，且蓝奏云反爬限制，无法进行版本号获取**
+
 ## 索引
 
 - [Android](#android)
@@ -78,7 +86,7 @@
 | <img src="icons/iOS/Sign/AltStore.png" width="24"> | AltStore (需要 Windows / MacOS) | [官网](https://altstore.io/) | [GitHub Releases](https://github.com/altstoreio/AltStore/tags) | ![AltStore 最新版本](https://img.shields.io/github/v/tag/altstoreio/AltStore) |
 | <img src="icons/iOS/Sign/Sideloadly.png" width="24"> | Sideloadly (需要 Windows / MacOS) | [官网](https://sideloadly.io/) | [官网下载](https://sideloadly.io/) | 请按网站实际显示为准 |
 | <img src="icons/iOS/Sign/nbtool8.png" width="24"> | NB助手 (需要 Windows / MacOS) | [官网](https://nbtool8.com/) | [官网下载](https://nbtool8.com/) | 没办法实时更新，截至2026/7/29，最新 Windows 版本是 v2.4.0.0 |
-| <img src="icons/iOS/Sign/ios222.png" width="24"> | 牛蛙助手 (需要 Windows / MacOS) | [官网](https://ios222.com/) | [官网下载](https://ios222.com/) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Sign/ios222.png" width="24"> | 牛蛙助手 (需要 Windows / MacOS) | [官网](https://ios222.com/) | [官网下载](https://ios222.com/) | 已停止更新，最新为 v1.1.2 |
 
 ---
 
