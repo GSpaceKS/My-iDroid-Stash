@@ -44,7 +44,7 @@
 | <img src="icons/Android/Tools/LibChecker.png" width="24"> | LibChecker | [GitHub](https://github.com/LibChecker/LibChecker) | [GitHub Releases](https://github.com/LibChecker/LibChecker/releases) | ![LibChecker 最新版本](https://img.shields.io/github/v/release/LibChecker/LibChecker) |
 | <img src="icons/Android/Tools/Hail.png" width="24"> | 雹 (Hail) | [GitHub](https://github.com/aistra0528/Hail) | [GitHub Releases](https://github.com/aistra0528/Hail/releases) | ![雹 (Hail) 最新版本](https://img.shields.io/github/v/release/aistra0528/Hail) |
 | <img src="icons/Android/Tools/App_Manager.png" width="24"> | App Manager | [GitHub](https://github.com/MuntashirAkon/AppManager) | [GitHub Releases](https://github.com/MuntashirAkon/AppManager/releases) | ![App Manager 最新版本](https://img.shields.io/github/v/release/MuntashirAkon/AppManager) |
-| <img src="icons/Android/Tools/mt2.png" width="24"> | MT管理器 | [官网](https://mt2.cn/) | [官网下载](https://mt2.cn/download/) | 没办法实时更新，截至2026/7/29，最新版本是 v2.26.7 |
+| <img src="icons/Android/Tools/mt2.png" width="24"> | MT管理器 | [官网](https://mt2.cn/) | [官网下载](https://mt2.cn/download/) |![release](https://img.shields.io/badge/release-v2.26.7-blue)|
 | <img src="icons/Android/Tools/InstallerX_Revived.png" width="24"> | InstallerX Revived | [GitHub](https://github.com/wxxsfxyzm/InstallerX-Revived) | [GitHub Releases](https://github.com/wxxsfxyzm/InstallerX-Revived/releases) | ![InstallerX Revived 最新版本](https://img.shields.io/github/v/release/wxxsfxyzm/InstallerX-Revived) |
 | <img src="icons/Android/Tools/SAI.png" width="24"> | SAI | [GitHub](https://github.com/Aefyr/SAI) | [GitHub Releases](https://github.com/Aefyr/SAI/releases) | ![SAI 最新版本](https://img.shields.io/github/v/release/Aefyr/SAI) |
 | <img src="icons/Android/Tools/Image_Toolbox.png" width="24"> | Image Toolbox | [GitHub](https://github.com/T8RIN/ImageToolbox) | [GitHub Releases](https://github.com/T8RIN/ImageToolbox/releases) | ![Image Toolbox 最新版本](https://img.shields.io/github/v/release/T8RIN/ImageToolbox) |
@@ -59,8 +59,8 @@
 |-|-|-|-|-|
 | <img src="icons/iOS/Tools/iTunes.png" width="24"> | iTunes | [官网](https://www.apple.com.cn/itunes/) | [Microsoft Store](https://apps.microsoft.com/detail/9pb2mz1zmb1s?hl=zh-CN&gl=CN) / [普通安装包](https://www.apple.com/itunes/download/win64) | 请自行在 Microsoft Store 上查看 |
 | <img src="icons/iOS/Tools/iCloud.png" width="24"> | iCloud | [官网](https://www.icloud.com/) | [Microsoft Store](https://apps.microsoft.com/detail/9pktq5699m62?hl=zh-CN&gl=CN) / [普通安装包 (2020 老版本)](https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe) | 请自行在 Microsoft Store 上查看 |
-| <img src="icons/iOS/Tools/i4.png" width="24"> | 爱思助手 | [官网](https://i4.cn/) | [官网下载](https://i4.cn/) | 请按网站实际显示为准 |
-| <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Tools/i4.png" width="24"> | 爱思助手 | [官网](https://i4.cn/) | [官网下载](https://i4.cn/) |![release](https://img.shields.io/badge/release-v9.16-blue)|
+| <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) |![release](https://img.shields.io/badge/release-v8.1.0-blue)|
 | <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) | 请按网站实际显示为准 |
 
 ---
@@ -84,7 +84,7 @@
 |-|-|-|-|-|
 | <img src="icons/iOS/Sign/TrollStore.png" width="24"> | TrollStore | [GitHub](https://github.com/opa334/TrollStore) | [GitHub Releases](https://github.com/opa334/TrollStore/releases) | ![TrollStore 最新版本](https://img.shields.io/github/v/release/opa334/TrollStore) |
 | <img src="icons/iOS/Sign/AltStore.png" width="24"> | AltStore (需要 Windows / MacOS) | [官网](https://altstore.io/) | [GitHub Releases](https://github.com/altstoreio/AltStore/tags) | ![AltStore 最新版本](https://img.shields.io/github/v/tag/altstoreio/AltStore) |
-| <img src="icons/iOS/Sign/Sideloadly.png" width="24"> | Sideloadly (需要 Windows / MacOS) | [官网](https://sideloadly.io/) | [官网下载](https://sideloadly.io/) | 请按网站实际显示为准 |
+| <img src="icons/iOS/Sign/Sideloadly.png" width="24"> | Sideloadly (需要 Windows / MacOS) | [官网](https://sideloadly.io/) | [官网下载](https://sideloadly.io/) |![release](https://img.shields.io/badge/release-v0.60.0-blue)|
 | <img src="icons/iOS/Sign/nbtool8.png" width="24"> | NB助手 (需要 Windows / MacOS) | [官网](https://nbtool8.com/) | [官网下载](https://nbtool8.com/) | 没办法实时更新，截至2026/7/29，最新 Windows 版本是 v2.4.0.0 |
 | <img src="icons/iOS/Sign/ios222.png" width="24"> | 牛蛙助手 (需要 Windows / MacOS) | [官网](https://ios222.com/) | [官网下载](https://ios222.com/) | 已停止更新，最新为 v1.1.2 |
 
