@@ -1,12 +1,14 @@
 """
-每半月更新：unc0ver、checkra1n、iMazing
+每半月更新：Scene、unc0ver、checkra1n、iMazing
 统一使用 Badge 展示版本号
 """
 
 import re
 import os
+import datetime
 import requests
 import subprocess
+import sys
 
 README = "README.md"
 
@@ -18,6 +20,22 @@ HEADERS = {
     'Connection': 'keep-alive',
     'Upgrade-Insecure-Requests': '1',
 }
+
+today_day = datetime.datetime.today().day
+if today_day not in [1, 16]:
+    print(f"今天是 {today_day} 号，不是 1 号或 16 号，跳过。")
+    sys.exit(0)
+
+
+def get_scene_version():
+    url = "https://vtools.oss-cn-beijing.aliyuncs.com/vi/Scene9.json"
+    resp = requests.get(url, headers=HEADERS, timeout=15)
+    resp.encoding = 'utf-8'
+    data = resp.json()
+    version = data.get("versionName")
+    if version:
+        return version
+    raise Exception("Scene 版本未找到")
 
 
 def get_unc0ver_version():
@@ -106,6 +124,7 @@ def update_readme(project_name, new_version):
 
 def biweekly_update():
     projects = [
+        {"name": "Scene", "get": get_scene_version},
         {"name": "unc0ver", "get": get_unc0ver_version},
         {"name": "checkra1n", "get": get_checkra1n_version},
         {"name": "iMazing", "get": get_imazing_version},

@@ -4,10 +4,8 @@
 ``` text
 使用 GitHub Action 搭配自己写的 Python 脚本来获取版本号
 其中，每天 (UTC 00：00) 获取版本号的是 MT管理器、Sideloadly、爱思助手、沙漏验机
-每半个月 (每月1号和16号的 UTC 00：00) 获取版本号的是 unc0ver、checkra1n、iMazing
+每半个月 (每月1号和16号的 UTC 00：00) 获取版本号的是 Scene、unc0ver、checkra1n、iMazing
 ```
-
-> **由于 Scene 官网使用 Vue 编写，且蓝奏云反爬限制，无法进行版本号获取**
 
 > **由于 NB助手 官网没有写版本号，且蓝奏云反爬限制，无法进行版本号获取**
 
@@ -42,7 +40,7 @@
 | 图标 | 工具 | 介绍 | 下载链接 | 版本 |
 |-|-|-|-|-|
 | <img src="icons/Android/Tools/Obtainium.png" width="24"> | Obtainium | [GitHub](https://github.com/ImranR98/Obtainium) | [GitHub Releases](https://github.com/ImranR98/Obtainium/releases) | ![Obtainium 最新版本](https://img.shields.io/github/v/release/ImranR98/Obtainium) |
-| <img src="icons/Android/Tools/Scene.png" width="24"> | Scene | [官网](https://omarea.com/#/) | [官网下载](https://omarea.com/#/platform) | 没办法自动更新，截至2026/7/30，最新版本是 v9.3.8 |
+| <img src="icons/Android/Tools/Scene.png" width="24"> | Scene | [官网](https://omarea.com/#/) | [官网下载](https://omarea.com/#/platform) |![release](https://img.shields.io/badge/release-v9.3.8-blue)|
 | <img src="icons/Android/Tools/LibChecker.png" width="24"> | LibChecker | [GitHub](https://github.com/LibChecker/LibChecker) | [GitHub Releases](https://github.com/LibChecker/LibChecker/releases) | ![LibChecker 最新版本](https://img.shields.io/github/v/release/LibChecker/LibChecker) |
 | <img src="icons/Android/Tools/Hail.png" width="24"> | 雹 (Hail) | [GitHub](https://github.com/aistra0528/Hail) | [GitHub Releases](https://github.com/aistra0528/Hail/releases) | ![雹 (Hail) 最新版本](https://img.shields.io/github/v/release/aistra0528/Hail) |
 | <img src="icons/Android/Tools/App_Manager.png" width="24"> | App Manager | [GitHub](https://github.com/MuntashirAkon/AppManager) | [GitHub Releases](https://github.com/MuntashirAkon/AppManager/releases) | ![App Manager 最新版本](https://img.shields.io/github/v/release/MuntashirAkon/AppManager) |
