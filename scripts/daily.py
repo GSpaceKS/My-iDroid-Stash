@@ -20,6 +20,10 @@ HEADERS = {
     'Upgrade-Insecure-Requests': '1',
 }
 
+TOOL_COL_INDEX = 2          # split('|') 后，工具名称所在的列表索引（0 为首位空字符串，2 对应第3列）
+VERSION_COL_INDEX = 5       # split('|') 后，版本号所在的列表索引（5 对应第6列）
+MIN_COLS = 7                # split('|') 后列表所需的最小元素数（6列数据 + 1个前导空字符串）
+
 
 def get_mt_version():
     url = "https://mt2.cn/download/"
@@ -95,23 +99,27 @@ def update_readme(project_name, new_version):
     badge = make_badge(new_version)
 
     for line in lines:
-        if project_name in line and '|' in line:
+        stripped = line.strip()
+        if stripped.startswith('|') and stripped.endswith('|') and stripped.count('|') >= MIN_COLS - 1:
             parts = line.split('|')
-            if len(parts) >= 5:
-                parts[-2] = badge
-                new_line = '|'.join(parts)
-                if new_line != line:
-                    updated = True
-                    line = new_line
+            if len(parts) >= MIN_COLS:
+                tool = parts[TOOL_COL_INDEX].strip()
+                if tool == project_name:
+                    old_badge = parts[VERSION_COL_INDEX].strip()  # 获取当前 Badge
+                    if old_badge != badge:
+                        parts[VERSION_COL_INDEX] = badge
+                        line = '|'.join(parts)
+                        updated = True
+                        print(f"✅ 已更新 {project_name} 版本为 {new_version} (Badge)")
+                    else:
+                        print(f"⏭️ {project_name} 版本无变化")
         new_lines.append(line)
 
     if updated:
         with open(README, 'w', encoding='utf-8') as f:
             f.writelines(new_lines)
-        print(f"✅ 已更新 {project_name} 版本为 {new_version} (Badge)")
         return True
     else:
-        print(f"⏭️ {project_name} 版本无变化")
         return False
 
 
