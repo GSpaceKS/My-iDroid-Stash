@@ -1,5 +1,5 @@
 """
-每日更新：MT管理器、Sideloadly、爱思助手、沙漏验机
+每日更新：MT管理器、Sideloadly、爱思助手、沙漏验机、iMazing
 统一使用 Badge 展示版本号
 """
 
@@ -76,6 +76,23 @@ def get_shalou_version():
     raise Exception("沙漏验机版本未找到")
 
 
+def get_imazing_version():
+    url = "https://imazing.com/download"
+    resp = requests.get(url, headers=HEADERS, timeout=15)
+    resp.encoding = 'utf-8'
+    text = resp.text
+    match = re.search(r'Version:</p>\s*<p><b>([\d.]+)</b></p>', text, re.DOTALL)
+    if match:
+        return match.group(1)
+    match = re.search(r'Version:\s*([\d.]+)', text, re.IGNORECASE)
+    if match:
+        return match.group(1)
+    match = re.search(r'<p><b>([\d.]+)</b></p>', text)
+    if match:
+        return match.group(1)
+    raise Exception("iMazing 版本未找到")
+
+
 def make_badge(version_str):
     ver_match = re.search(r'(\d+\.\d+\.\d+\.?\d*)', version_str)
     if not ver_match:
@@ -126,9 +143,10 @@ def update_readme(project_name, new_version):
 def daily_update():
     projects = [
         {"name": "MT管理器", "get": get_mt_version},
-        {"name": "Sideloadly", "get": get_sideloadly_version},
+        {"name": "Sideloadly (需要 Windows / MacOS)", "get": get_sideloadly_version},
         {"name": "爱思助手", "get": get_aisi_version},
         {"name": "沙漏验机", "get": get_shalou_version},
+        {"name": "iMazing", "get": get_imazing_version},
     ]
 
     any_updated = False

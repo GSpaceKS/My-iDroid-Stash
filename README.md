@@ -3,8 +3,8 @@
 
 ``` text
 使用 GitHub Action 搭配自己写的 Python 脚本来获取版本号
-其中，每天 (UTC 00：00) 获取版本号的是 MT管理器、Sideloadly、爱思助手、沙漏验机
-每半个月 (每月1号和16号的 UTC 00：00) 获取版本号的是 Scene、unc0ver、checkra1n、iMazing
+其中，每天 (UTC 00：00) 获取版本号的是 MT管理器、Sideloadly、爱思助手、沙漏验机、iMazing
+每半个月 (每月1号和16号的 UTC 00：00) 获取版本号的是 Scene、checkra1n
 ```
 
 > **由于 NB助手 官网没有写版本号，且蓝奏云反爬限制，无法进行版本号获取**

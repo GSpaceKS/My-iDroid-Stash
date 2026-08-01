@@ -1,5 +1,5 @@
 """
-每半月更新：Scene、unc0ver、checkra1n、iMazing
+每半月更新：Scene、checkra1n
 统一使用 Badge 展示版本号
 """
 
@@ -42,16 +42,6 @@ def get_scene_version():
     raise Exception("Scene 版本未找到")
 
 
-def get_unc0ver_version():
-    url = "https://unc0ver.dev/"
-    resp = requests.get(url, headers=HEADERS, timeout=15)
-    resp.encoding = 'utf-8'
-    match = re.search(r'v(\d+\.\d+\.\d+)', resp.text)
-    if match:
-        return f"v{match.group(1)}"
-    raise Exception("unc0ver 版本未找到")
-
-
 def get_checkra1n_version():
     url = "https://checkra.in/releases/"
     resp = requests.get(url, headers=HEADERS, timeout=15)
@@ -64,23 +54,6 @@ def get_checkra1n_version():
     if match:
         return match.group(1)
     raise Exception("checkra1n 版本未找到")
-
-
-def get_imazing_version():
-    url = "https://imazing.com/download"
-    resp = requests.get(url, headers=HEADERS, timeout=15)
-    resp.encoding = 'utf-8'
-    text = resp.text
-    match = re.search(r'Version:</p>\s*<p><b>([\d.]+)</b></p>', text, re.DOTALL)
-    if match:
-        return match.group(1)
-    match = re.search(r'Version:\s*([\d.]+)', text, re.IGNORECASE)
-    if match:
-        return match.group(1)
-    match = re.search(r'<p><b>([\d.]+)</b></p>', text)
-    if match:
-        return match.group(1)
-    raise Exception("iMazing 版本未找到")
 
 
 def make_badge(version_str):
@@ -133,9 +106,7 @@ def update_readme(project_name, new_version):
 def biweekly_update():
     projects = [
         {"name": "Scene", "get": get_scene_version},
-        {"name": "unc0ver", "get": get_unc0ver_version},
         {"name": "checkra1n", "get": get_checkra1n_version},
-        {"name": "iMazing", "get": get_imazing_version},
     ]
 
     any_updated = False
