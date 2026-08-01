@@ -61,7 +61,7 @@
 | <img src="icons/iOS/Tools/iCloud.png" width="24"> | iCloud | [官网](https://www.icloud.com/) | [Microsoft Store](https://apps.microsoft.com/detail/9pktq5699m62?hl=zh-CN&gl=CN) / [普通安装包 (2020 老版本)](https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe) | — (Microsoft Store) | 苹果云存储 |
 | <img src="icons/iOS/Tools/i4.png" width="24"> | 爱思助手 | [官网](https://i4.cn/) | [官网下载](https://i4.cn/) |![release](https://img.shields.io/badge/release-v9.16-blue)| 刷机/备份/装应用一站式管理 |
 | <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) |![release](https://img.shields.io/badge/release-v8.1.0-blue)| 验机/刷机/管理苹果设备 |
-| <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) |![release](https://img.shields.io/badge/release-v3.6.1-blue)| 备份/传文件/管理iPhone的电脑软件 |
+| <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) |![release](https://img.shields.io/badge/release-v3.6.2-blue)| 备份/传文件/管理iPhone的电脑软件 |
 
 ---
 
