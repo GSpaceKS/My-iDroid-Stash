@@ -25,10 +25,10 @@ TOOL_COL_INDEX = 2          # split('|') 后，工具名称所在的列表索引
 VERSION_COL_INDEX = 5       # split('|') 后，版本号所在的列表索引（5 对应第6列）
 MIN_COLS = 7                # split('|') 后列表所需的最小元素数（6列数据 + 1个前导空字符串）
 
-today_day = datetime.datetime.today().day
-if today_day not in [1, 16]:
-    print(f"今天是 {today_day} 号，不是 1 号或 16 号，跳过。")
-    sys.exit(0)
+# today_day = datetime.datetime.today().day
+# if today_day not in [1, 16]:
+#     print(f"今天是 {today_day} 号，不是 1 号或 16 号，跳过。")
+#     sys.exit(0)
 
 
 def get_scene_version():
@@ -70,13 +70,16 @@ def make_badge(version_str):
     return f"![{label}]({badge_url})"
 
 
-def update_readme(project_name, new_version):
+def update_readme(project_name, new_version, download_url=None):
     with open(README, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     updated = False
     new_lines = []
-    badge = make_badge(new_version)
+    badge = make_badge(new_version)  # 生成图片 Badge
+
+    if download_url:
+        badge = f"[{badge}]({download_url})"
 
     for line in lines:
         stripped = line.strip()
@@ -85,7 +88,7 @@ def update_readme(project_name, new_version):
             if len(parts) >= MIN_COLS:
                 tool = parts[TOOL_COL_INDEX].strip()
                 if tool == project_name:
-                    old_badge = parts[VERSION_COL_INDEX].strip()  # 获取当前 Badge
+                    old_badge = parts[VERSION_COL_INDEX].strip()
                     if old_badge != badge:
                         parts[VERSION_COL_INDEX] = badge
                         line = '|'.join(parts)
@@ -105,15 +108,16 @@ def update_readme(project_name, new_version):
 
 def biweekly_update():
     projects = [
-        {"name": "Scene", "get": get_scene_version},
-        {"name": "checkra1n", "get": get_checkra1n_version},
+        {"name": "Scene", "get": get_scene_version, "url": "https://omarea.com/#/platform"},
+        {"name": "checkra1n", "get": get_checkra1n_version, "url": "https://checkra.in/#release"},
     ]
 
     any_updated = False
     for p in projects:
         try:
             ver = p["get"]()
-            if update_readme(p["name"], ver):
+            # 传入url，如果没有则传 None
+            if update_readme(p["name"], ver, p.get("url")):
                 any_updated = True
         except Exception as e:
             print(f"❌ 获取 {p['name']} 版本失败: {e}")
