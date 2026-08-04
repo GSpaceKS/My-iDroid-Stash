@@ -107,16 +107,13 @@ def make_badge(version_str):
     return f"![{label}]({badge_url})"
 
 
-def update_readme(project_name, new_version, download_url=None):
+def update_readme(project_name, new_version):
     with open(README, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     updated = False
     new_lines = []
-    badge = make_badge(new_version)  # 生成图片 Badge
-
-    if download_url:
-        badge = f"[{badge}]({download_url})"
+    badge = make_badge(new_version)
 
     for line in lines:
         stripped = line.strip()
@@ -125,7 +122,7 @@ def update_readme(project_name, new_version, download_url=None):
             if len(parts) >= MIN_COLS:
                 tool = parts[TOOL_COL_INDEX].strip()
                 if tool == project_name:
-                    old_badge = parts[VERSION_COL_INDEX].strip()
+                    old_badge = parts[VERSION_COL_INDEX].strip()  # 获取当前 Badge
                     if old_badge != badge:
                         parts[VERSION_COL_INDEX] = badge
                         line = '|'.join(parts)
@@ -145,19 +142,18 @@ def update_readme(project_name, new_version, download_url=None):
 
 def daily_update():
     projects = [
-        {"name": "MT管理器", "get": get_mt_version, "url": "https://mt2.cn/download/"},
-        {"name": "Sideloadly (需要 Windows / MacOS)", "get": get_sideloadly_version, "url": "https://sideloadly.io/"},
-        {"name": "爱思助手", "get": get_aisi_version, "url": "https://www.i4.cn/"},
-        {"name": "沙漏验机", "get": get_shalou_version, "url": "https://www.shalou.net/"},
-        {"name": "iMazing", "get": get_imazing_version, "url": "https://imazing.com/"},
+        {"name": "MT管理器", "get": get_mt_version},
+        {"name": "Sideloadly (需要 Windows / MacOS)", "get": get_sideloadly_version},
+        {"name": "爱思助手", "get": get_aisi_version},
+        {"name": "沙漏验机", "get": get_shalou_version},
+        {"name": "iMazing", "get": get_imazing_version},
     ]
 
     any_updated = False
     for p in projects:
         try:
             ver = p["get"]()
-            # 传入url，如果没有则传 None
-            if update_readme(p["name"], ver, p.get("url")):
+            if update_readme(p["name"], ver):
                 any_updated = True
         except Exception as e:
             print(f"❌ 获取 {p['name']} 版本失败: {e}")
