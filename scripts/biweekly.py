@@ -25,10 +25,10 @@ TOOL_COL_INDEX = 2          # split('|') 后，工具名称所在的列表索引
 VERSION_COL_INDEX = 5       # split('|') 后，版本号所在的列表索引（5 对应第6列）
 MIN_COLS = 7                # split('|') 后列表所需的最小元素数（6列数据 + 1个前导空字符串）
 
-# today_day = datetime.datetime.today().day
-# if today_day not in [1, 16]:
-#     print(f"今天是 {today_day} 号，不是 1 号或 16 号，跳过。")
-#     sys.exit(0)
+today_day = datetime.datetime.today().day
+if today_day not in [1, 16]:
+    print(f"今天是 {today_day} 号，不是 1 号或 16 号，跳过。")
+    sys.exit(0)
 
 
 def get_scene_version():
