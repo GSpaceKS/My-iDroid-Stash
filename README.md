@@ -69,6 +69,7 @@
 
 | 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
 |-|-|-|-|-|-|
+| <img src="icons/Android/Tools/AuroraStore.png" width="24"> | Aurora Store | [官网](https://auroraoss.com/) | [官网下载](https://auroraoss.com/files) | [![AuroraStore 最新版本](https://img.shields.io/github/v/tag/whyorean/AuroraStore)](https://auroraoss.com/files) | 开源、无广告的 Google Play 第三方客户端，无需谷歌服务即可匿名下载应用 |
 | <img src="icons/Android/Tools/Obtainium.png" width="24"> | Obtainium | [GitHub](https://github.com/ImranR98/Obtainium) | [GitHub Releases](https://github.com/ImranR98/Obtainium/releases) | [![Obtainium 最新版本](https://img.shields.io/github/v/release/ImranR98/Obtainium)](https://github.com/ImranR98/Obtainium/releases/latest) | 	通过添加GitHub/GitLab/Gitee等仓库地址，统一检测和下载APK更新，相当于自定义源的应用商店 |
 | <img src="icons/Android/Tools/InstallerX_Revived.png" width="24"> | InstallerX Revived | [GitHub](https://github.com/wxxsfxyzm/InstallerX-Revived) | [GitHub Releases](https://github.com/wxxsfxyzm/InstallerX-Revived/releases) | [![InstallerX Revived 最新版本](https://img.shields.io/github/v/release/wxxsfxyzm/InstallerX-Revived)](https://github.com/wxxsfxyzm/InstallerX-Revived/releases/latest) | 原 `InstallerX` 的社区续作，开源安装器 |
 | <img src="icons/Android/Tools/SAI.png" width="24"> | SAI | [GitHub](https://github.com/Aefyr/SAI) | [GitHub Releases](https://github.com/Aefyr/SAI/releases) | [![SAI 最新版本](https://img.shields.io/github/v/release/Aefyr/SAI)](https://github.com/Aefyr/SAI/releases/latest) | 专门安装各种分包格式的开源安装器 |
