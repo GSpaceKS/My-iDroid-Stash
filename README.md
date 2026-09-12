@@ -80,7 +80,7 @@
 
 | 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
 |-|-|-|-|-|-|
-| <img src="icons/Android/Tools/mt2.png" width="24"> | MT管理器 | [官网](https://mt2.cn/) | [官网下载](https://mt2.cn/download/) |[![release](https://img.shields.io/badge/release-v2.26.8-blue)](https://mt2.cn/download/)| 双窗口文件管理+直接修改APK |
+| <img src="icons/Android/Tools/mt2.png" width="24"> | MT管理器 | [官网](https://mt2.cn/) | [官网下载](https://mt2.cn/download/) |[![release](https://img.shields.io/badge/release-v2.26.9-blue)](https://mt2.cn/download/)| 双窗口文件管理+直接修改APK |
 | <img src="icons/Android/Tools/Termux.png" width="24"> | Termux | [官网](https://termux.dev/cn/) | [GitHub Releases](https://github.com/termux/termux-app/releases) | [![Termux 最新版本](https://img.shields.io/github/v/release/termux/termux-app)](https://github.com/termux/termux-app/releases/latest) | 开源终端模拟器+包管理器 |
 | <img src="icons/Android/Tools/aShellYou.png" width="24"> | aShell You | [GitHub](https://github.com/DP-Hridayan/aShellYou) | [GitHub Releases](https://github.com/DP-Hridayan/aShellYou/releases) | [![aShell You 最新版本](https://img.shields.io/github/v/release/DP-Hridayan/aShellYou)](https://github.com/DP-Hridayan/aShellYou/releases/latest) | 手机上的ADB命令行工具 |
 
