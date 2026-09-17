@@ -11,16 +11,18 @@
 
 ## 索引
 
-- [Android](#android)
-    - [权限类](#权限类)
-    - [工具类](#工具类)
-      - [性能监控/调校](#性能监控调校)
-      - [应用权限/组件管理](#应用权限组件管理)
-      - [应用更新/安装](#应用更新安装)
-      - [终端与文件管理](#终端与文件管理)
-      - [图像处理](#图像处理)
-      - [文件传输](#文件传输)
-      - [网络代理](#网络代理)
+- [My iDroid Stash](#my-idroid-stash)
+  - [索引](#索引)
+  - [Android](#android)
+    - [性能监控/调校](#性能监控调校)
+    - [应用权限/组件管理](#应用权限组件管理)
+    - [应用更新/安装](#应用更新安装)
+    - [终端与文件管理](#终端与文件管理)
+    - [图像处理](#图像处理)
+    - [文件传输](#文件传输)
+    - [网络代理](#网络代理)
+  - [iOS](#ios)
+    - [↑ 回到顶部](#-回到顶部)
 
 ---
 
@@ -145,7 +147,9 @@
 | <img src="icons/iOS/Jailbreak/Odyssey.png" width="24"> | Odyssey | [官网](https://theodyssey.dev/) | [GitHub Releases](https://github.com/Odyssey-Team/Odyssey/releases) | [![Odyssey 最新版本](https://img.shields.io/github/v/release/Odyssey-Team/Odyssey)](https://github.com/Odyssey-Team/Odyssey/releases/latest) | CoolStar 团队开发的 iOS 13 越狱工具 |
 | <img src="icons/iOS/Jailbreak/checkra1n.png" width="24"> | checkra1n | [官网](https://checkra.in/) | [官网下载](https://checkra.in) |[![beta](https://img.shields.io/badge/beta-v0.12.4-orange)](https://checkra.in/#release)| checkm8漏洞的经典越狱工具 |
 
-> ### Jailbreak 版本说明 (使用AI总结，iOS对应版本可能有误，请对照查看)
+<details>
+<summary><strong>Jailbreak 版本说明 (使用AI总结，iOS对应版本可能有误，请对照查看)</strong></summary>
+
 | 软件 | 最新版本 | 支持的处理器 | 支持的iOS版本 | 项目状态 | 备注 |
 |-|-|-|-|-|-|
 | **Dopamine** | v2.4.9 | A9–A11 (arm64) | iOS 15.0 – 15.8.6 / 16.0 – 16.6.1 | 活跃维护 | 官方 GitHub: opa334/Dopamine；v2.5 beta 已扩展至 iOS 17.0–17.3.1 |
@@ -157,6 +161,8 @@
 | **Odyssey** | v1.4.3 | A8 – A13 | iOS 13.0 – 13.7 | **已停止维护** (归档) | **不兼容** iOS 13.5.1 和 13.6；官方 GitHub 已归档 |
 | **checkra1n** | 0.12.4 beta | A5 – A11 | 官方: iOS 12.0 – 14.8.1 | 活跃维护 | 基于 checkm8 硬件漏洞；A11 + iOS 14.0+ 需禁用锁屏密码；需 macOS/Linux |
 |  |  | A9–A11 | 实验性: iOS 15 – 16 |  | 实验性支持，非官方正式版 |
+
+</details>
 
 ---
 
