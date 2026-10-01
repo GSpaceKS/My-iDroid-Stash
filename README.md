@@ -138,7 +138,7 @@
 | <img src="icons/iOS/Tools/iTunes.png" width="24"> | iTunes | [官网](https://www.apple.com.cn/itunes/) | [Microsoft Store](https://apps.microsoft.com/detail/9pb2mz1zmb1s?hl=zh-CN&gl=CN) / [普通安装包](https://www.apple.com/itunes/download/win64) | — (Microsoft Store) | 苹果设备管理软件 |
 | <img src="icons/iOS/Tools/iCloud.png" width="24"> | iCloud | [官网](https://www.icloud.com/) | [Microsoft Store](https://apps.microsoft.com/detail/9pktq5699m62?hl=zh-CN&gl=CN) / [普通安装包 (2020 老版本)](https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe) | — (Microsoft Store) | 苹果云存储 |
 | <img src="icons/iOS/Tools/i4.png" width="24"> | 爱思助手 | [官网](https://i4.cn/) | [官网下载](https://i4.cn/) |[![release](https://img.shields.io/badge/release-v9.21-blue)](https://www.i4.cn/)| 刷机/备份/装应用一站式管理 |
-| <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) |[![release](https://img.shields.io/badge/release-v8.2.1-blue)](https://www.shalou.net/)| 验机/刷机/管理苹果设备 |
+| <img src="icons/iOS/Tools/shalou.png" width="24"> | 沙漏验机 | [官网](https://www.shalou.net/#/home) | [官网下载](https://www.shalou.net/#/home) |[![release](https://img.shields.io/badge/release-v8.2.2-blue)](https://www.shalou.net/)| 验机/刷机/管理苹果设备 |
 | <img src="icons/iOS/Tools/iMazing.png" width="24"> | iMazing | [官网](https://imazing.com/) | [官网下载](https://imazing.com/) |[![release](https://img.shields.io/badge/release-v3.6.5-blue)](https://imazing.com/)| 备份/传文件/管理iPhone的电脑软件 |
 
 ---
@@ -179,7 +179,7 @@
 |-|-|-|-|-|-|
 | <img src="icons/iOS/Sign/TrollStore.png" width="24"> | TrollStore | [GitHub](https://github.com/opa334/TrollStore) | [GitHub Releases](https://github.com/opa334/TrollStore/releases) | [![TrollStore 最新版本](https://img.shields.io/github/v/release/opa334/TrollStore)](https://github.com/opa334/TrollStore/releases/latest) | opa334开发的永久签名安装器 (CoreTrust漏洞) |
 | <img src="icons/iOS/Sign/AltStore.png" width="24"> | AltStore (需要 Windows / MacOS) | [官网](https://altstore.io/) | [官网下载](https://altstore.io/#Downloads) | 由于作者官网没有写版本+GitHub上也不上传包了，所以无法获取版本 | 电脑配合，7天自动续签装IPA |
-| <img src="icons/iOS/Sign/Sideloadly.png" width="24"> | Sideloadly (需要 Windows / MacOS) | [官网](https://sideloadly.io/) | [官网下载](https://sideloadly.io/) |[![release](https://img.shields.io/badge/release-v0.60.0-blue)](https://sideloadly.io/)| 比AltStore更灵活，Win/Mac都能用，支持USB+WiFi |
+| <img src="icons/iOS/Sign/Sideloadly.png" width="24"> | Sideloadly (需要 Windows / MacOS) | [官网](https://sideloadly.io/) | [官网下载](https://sideloadly.io/) |[![release](https://img.shields.io/badge/release-v0.70.1-blue)](https://sideloadly.io/)| 比AltStore更灵活，Win/Mac都能用，支持USB+WiFi |
 | <img src="icons/iOS/Sign/nbtool8.png" width="24"> | NB助手 (需要 Windows / MacOS) | [官网](https://nbtool8.com/) | [官网下载](https://nbtool8.com/) | 没办法自动更新，截至2026/7/30，最新 Windows 版本是 v2.4.0.0 | 国产免费iOS IPA签名+应用管理工具，但首次需电脑 |
 | <img src="icons/iOS/Sign/ios222.png" width="24"> | 牛蛙助手 (需要 Windows / MacOS) | [官网](https://ios222.com/) | [官网下载](https://ios222.com/) | 已停止更新，最新为 v1.1.2 | 和NB助手类似，首次需电脑，后续手机续签 |
 
