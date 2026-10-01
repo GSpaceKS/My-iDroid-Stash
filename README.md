@@ -20,10 +20,11 @@
     - [终端与文件管理](#终端与文件管理)
     - [图像处理](#图像处理)
     - [文件传输](#文件传输)
+    - [辅助类](#辅助类)
     - [网络代理](#网络代理)
   - [iOS](#ios)
-    - [工具类](#工具类-1)
-    - [Jailbreak](#jailbreak)
+    - [管理 iPhone](#管理-iphone)
+    - [Jailbreak 越狱](#jailbreak-越狱)
     - [自签](#自签)
 ---
 
@@ -96,6 +97,16 @@
 |-|-|-|-|-|-|
 | <img src="icons/Android/Tools/LocalSend.png" width="24"> | LocalSend | [官网](https://localsend.org/) | [GitHub Releases](https://github.com/localsend/localsend/releases) | [![LocalSend 最新版本](https://img.shields.io/github/v/release/localsend/localsend)](https://github.com/localsend/localsend/releases/latest) | 内网多平台传输工具 |
 
+---
+
+### 辅助类
+
+| 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
+|-|-|-|-|-|-|
+| <picture><source media="(prefers-color-scheme: dark)" srcset="icons/Android/Tools/GKD_W.png"><source media="(prefers-color-scheme: light)" srcset="icons/Android/Tools/GKD_B.png"><img src="icons/Android/Tools/GKD_B.png" width="24" alt="GKD"></picture> | GKD | [GitHub](https://github.com/gkd-kit/gkd) | [GitHub Releases](https://github.com/gkd-kit/gkd/releases) | [![LocalSend 最新版本](https://img.shields.io/github/v/release/gkd-kit/gkd)](https://github.com/gkd-kit/gkd/releases/latest) | 基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 |
+
+---
+
 ### 网络代理
 
 > 共同支持的协议有 Shadowsocks (SS)、VMess、VLESS、Trojan、TUIC、WireGuard、Hysteria 2
@@ -120,6 +131,8 @@
 
 > ## 工具类
 
+### 管理 iPhone
+
 | 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
 |-|-|-|-|-|-|
 | <img src="icons/iOS/Tools/iTunes.png" width="24"> | iTunes | [官网](https://www.apple.com.cn/itunes/) | [Microsoft Store](https://apps.microsoft.com/detail/9pb2mz1zmb1s?hl=zh-CN&gl=CN) / [普通安装包](https://www.apple.com/itunes/download/win64) | — (Microsoft Store) | 苹果设备管理软件 |
@@ -130,7 +143,7 @@
 
 ---
 
-> ## Jailbreak
+### Jailbreak 越狱
 
 | 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
 |-|-|-|-|-|-|
@@ -160,7 +173,7 @@
 
 ---
 
-> ## 自签
+### 自签
 
 | 图标 | 工具 | 官方地址 | 下载链接 | 版本 | 介绍 |
 |-|-|-|-|-|-|
